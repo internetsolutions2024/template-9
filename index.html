@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="favicon.ico">
+   <title>Example-9</title>
+</head>
+
+<body>
+   <style>
+      /*https://ld-wt73.template-help.com/wt_prod-20688/index.html*/
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      body {
+         background-color: #ececec;
+      }
+
+      :root {
+         --mycolor1: #efc4a3;
+         --mycolor2: #151515;
+         --mycolor3: rgba(21, 21, 21, 0.6);
+         --mycolor4: #e1e1e1;
+         --mycolor5: #976f55;
+         --mycolor6: #9b9b9b;
+         /*For icons*/
+         --myfont1: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         ;
+         --myfont2: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .main {
+         box-sizing: border-box;
+         max-width: 900px;
+         margin: 0 auto;
+         background-color: #fff;
+         font-family: var(--myfont1);
+         color: var(--mycolor2);
+      }
+
+      a {
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      * h3,
+      h4 {
+         margin: 0 0 10px 0 !important;
+         font-family: var(--myfont1) !important;
+      }
+
+      * h2 {
+         font-size: 18px !important;
+         line-height: 24px !important;
+         font-weight: 600 !important;
+         margin: 15px 0 !important;
+         color: var(--mycolor2);
+         font-family: var(--myfont1) !important;
+      }
+
+      h3,
+      h4 {
+         font-size: 22px !important;
+         font-weight: 500;
+         letter-spacing: 0.5px;
+      }
+
+      p {
+         font-size: 14px;
+         line-height: 18px;
+         margin: 10px 0 !important;
+         color: var(--mycolor2);
+         letter-spacing: 0.5px;
+      }
+
+      ul {
+         padding: 0 !important;
+         margin: 0 !important;
+      }
+
+      ul li {
+         list-style-type: none !important;
+         padding-left: 20px !important;
+         font-size: 14px !important;
+         line-height: 22px !important;
+         padding: 0 !important;
+         margin: 7px 0 !important;
+      }
+
+      ._container {
+         max-width: 900px;
+         margin: 0 auto;
+      }
+
+      /*--------introduction---------*/
+
+      .introduction {
+         padding: 50px 40px;
+         background: transparent url(img-9/introduction.jpg);
+         background-size: cover;
+         background-position: center left;
+      }
+
+      .introduction__container {}
+
+      .__container {}
+
+      .introduction__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+      }
+
+      .introduction__content {
+         flex: 1 1 40%;
+      }
+
+      .introduction__title {
+         font-size: 60px;
+         line-height: 65px;
+         text-transform: uppercase;
+         font-weight: 300;
+      }
+
+      .introduction__text {
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 20px;
+         word-spacing: 2px;
+      }
+
+      .introduction__button {
+         margin-top: 10px;
+      }
+
+      .par-button_1 {
+         display: inline-block;
+         padding: 12px 30px 9px;
+         font-size: 16px;
+         line-height: 22px;
+         color: var(--mycolor2) !important;
+         text-transform: uppercase;
+         border: 2px solid var(--mycolor2);
+         transition: .4s;
+         position: relative;
+         z-index: 0;
+         overflow: hidden;
+
+      }
+
+      .par-button_1::after {
+         position: absolute;
+         content: '';
+         top: 0%;
+         left: calc(50% - 20px);
+         width: 40px;
+         height: 100%;
+         background-color: var(--mycolor1);
+         z-index: -1;
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .par-button_1:hover::after {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 1;
+         transition: .3s;
+      }
+
+      .par-button_1:hover {
+         color: #fff !important;
+         transition: .4s;
+         border: 2px solid var(--mycolor1);
+      }
+
+      .introduction__image {
+         flex: 1 1 50%;
+      }
+
+      @media screen and (max-width: 700px) {
+         .introduction__content {
+            flex: 1 1 80%;
+         }
+
+         .introduction__title {
+            font-size: 50px;
+            line-height: 55px;
+         }
+
+         .introduction {
+            padding: 50px 30px;
+         }
+      }
+
+      /*------offer------*/
+      .offer {
+         padding: 30px 40px;
+      }
+
+      .offer__container {}
+
+      .__container {}
+
+      .offer__title {}
+
+      .par-title {
+         text-align: center;
+         overflow: hidden;
+         position: relative;
+         z-index: 0;
+      }
+
+      .par-title::after {
+         position: absolute;
+         content: '';
+         width: 100%;
+         top: calc(50% - 2px);
+         right: 0;
+         border-top: 2px solid var(--mycolor4);
+         z-index: -1;
+      }
+
+      .par-title h2 {
+         background-color: #fff;
+         display: inline-block;
+         padding: 0 10px;
+      }
+
+      .offer__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .offer__item {
+         flex: 1 0 30%;
+         margin: 10px;
+
+      }
+
+      .offer__item:hover {
+         background-color: var(--mycolor1);
+         transition: .3s;
+      }
+
+      .offer__item_1 {
+         flex: 1 0 63%;
+         position: relative;
+      }
+
+      .offer__item_1::after {
+         position: absolute;
+         content: 'NEW';
+         top: 20px;
+         right: 0;
+         font-size: 16px;
+         padding: 3px 10px 1px 15px;
+         background-color: #fbef89;
+         clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+         color: var(--mycolor2);
+         font-weight: 600;
+      }
+
+      .offer__item_2 {
+         flex: 1 0 30%;
+         position: relative;
+      }
+
+      .offer__item_2::after {
+         position: absolute;
+         content: '-30%';
+         top: 20px;
+         right: 0;
+         font-size: 16px;
+         padding: 3px 10px 1px 15px;
+         background-color: var(--mycolor5);
+         clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+         color: #fff;
+         font-weight: 600;
+      }
+
+      .offer__image {
+         display: flex;
+         overflow: hidden;
+      }
+
+      .offer__image img {
+         width: 100%;
+         height: 230px;
+         display: flex;
+         object-fit: cover;
+         transform: scale(1.1);
+         transition: .3s;
+      }
+
+      .offer__item:hover .offer__image img {
+         transform: scale(1);
+         transition: .3s;
+      }
+
+      .offer__content {
+         padding: 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border: 1px solid var(--mycolor4);
+      }
+
+      .offer__item:hover .offer__content {
+         border: 1px solid var(--mycolor1);
+      }
+
+
+      .offer__description {
+         margin: 0 !important;
+         transition: .3s;
+      }
+
+      .offer__item:hover .offer__description {
+         color: #fff;
+         transition: .3s;
+         letter-spacing: 3px;
+      }
+
+      .offer__arrow {
+         position: relative;
+      }
+
+      .offer__arrow::after {
+         position: absolute;
+         content: '';
+         width: 0;
+         height: 0;
+         border-style: solid;
+         border-width: 5px 0 5px 8px;
+         border-color: transparent transparent transparent rgba(21, 21, 21, 0.21);
+         top: -5px;
+      }
+
+      .offer__arrow::before {
+         position: absolute;
+         content: '';
+         height: 2px;
+         width: 21px;
+         margin-right: 4px;
+         top: -1px;
+         right: 5px;
+         background-color: rgba(21, 21, 21, 0.21);
+         transition: .3s;
+      }
+
+      .offer__item:hover ::before {
+         width: 42px;
+         transition: .3s;
+      }
+
+      @media screen and (max-width: 500px) {
+         .offer__item {
+            flex: 1 1 100%;
+         }
+
+         .offer {
+            padding: 30px;
+         }
+      }
+
+      /*--------products-------*/
+      .products {
+         padding: 30px 40px;
+      }
+
+      .products__container {}
+
+      ._container {}
+
+      .products__title {}
+
+      .par-title {}
+
+      .products__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .products__image {
+         flex: 1 1 40%;
+         margin: 10px;
+      }
+
+      .products__image img {
+         width: 100%;
+         object-fit: cover;
+      }
+
+      .products__content {
+         flex: 1 1 40%;
+         display: flex;
+         flex-wrap: wrap;
+         margin: 5px;
+      }
+
+      .item-products {
+         text-align: center;
+         flex: 1 1 40%;
+         margin: 5px;
+      }
+
+      .item-products__image {
+         background-color: #efefef;
+         position: relative;
+      }
+
+      .item-products__image img {
+         width: 100%;
+         display: flex;
+         max-height: 190px;
+         object-fit: cover;
+      }
+
+      .item-products__name {
+         display: inline-block;
+         font-size: 20px;
+         margin: 10px 0 0 0 !important;
+         font-weight: 400 !important;
+         color: var(--mycolor2);
+         transition: .3s;
+      }
+
+      .item-products__name:hover {
+         color: var(--mycolor1);
+         transition: .3s;
+      }
+
+      .item-products__price {
+         margin: 0 0 5px 0 !important;
+         color: var(--mycolor5);
+         font-size: 16px;
+      }
+
+      .item-products__price span {
+         color: #b0b0b0;
+         text-decoration: line-through;
+      }
+
+      .products__hiden {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(21, 21, 21, 0.2);
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .item-products:hover .products__hiden {
+         opacity: 1;
+         transition: .3s;
+         transform: scale(0.95);
+      }
+
+      .products__button {
+         border: none;
+         background-color: #fff;
+         color: var(--mycolor2);
+         transform: translateY(20px);
+         opacity: 0;
+      }
+
+      .item-products:hover .products__button {
+         opacity: 1;
+         transition: transform opacity .3s .1s;
+         transform: translateY(0);
+         opacity: 1;
+      }
+
+      .products__button:hover {
+         border: none;
+      }
+
+      @media screen and (max-width: 500px) {
+         .products {
+            padding: 30px;
+         }
+
+         .products__content {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*-------advantages-------*/
+
+      .advantages {
+         padding: 30px 40px;
+      }
+
+      .advantages__container {}
+
+      ._container {}
+
+      .advantages__title {}
+
+      .par-title {}
+
+      .advantages__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .advantages__item {
+         flex: 1 1 25%;
+         border: 1px solid var(--mycolor4);
+         padding: 5px;
+         margin: 10px;
+         position: relative;
+         z-index: 0;
+         transition: .3s;
+      }
+
+      .advantages__item::after {
+         content: '';
+         top: 20px;
+         left: 20px;
+         width: calc(100% - 40px);
+         height: calc(100% - 40px);
+         position: absolute;
+         background-color: var(--mycolor1);
+         z-index: -1;
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .advantages__item:hover::after {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 1;
+         transition: .3s;
+         border: 1px solid var(--mycolor1);
+      }
+
+      .advantages__item_wrapp {
+         border: 1px solid var(--mycolor4);
+         display: flex;
+         align-items: center;
+         padding: 20px 5px;
+      }
+
+      .advantages__item:hover .advantages__item_wrapp {
+         border: 1px solid #fff;
+      }
+
+      .advantages__icon {
+         width: 44px;
+         height: 44px;
+         background: transparent url(img-9/advanteges1.png);
+         background-size: cover;
+         margin: 0 7px 0 2px;
+         transition: .3s;
+      }
+
+      .advantages__item:hover .advantages__icon {
+         background: transparent url(img-9/advanteges1-2.png);
+         background-size: cover;
+         transition: .3s;
+      }
+
+      .advantages__icon_2 {
+         background: transparent url(img-9/advanteges2.png);
+         background-size: cover;
+      }
+
+      .advantages__item:hover .advantages__icon_2 {
+         background: transparent url(img-9/advanteges2-2.png);
+         background-size: cover;
+      }
+
+      .advantages__icon_3 {
+         background: transparent url(img-9/advanteges3.png);
+         background-size: cover;
+      }
+
+      .advantages__item:hover .advantages__icon_3 {
+         background: transparent url(img-9/advanteges3-2.png);
+         background-size: cover;
+      }
+
+      .advantages__content {}
+
+      .advantages__description {
+         font-size: 18px !important;
+         line-height: 22px !important;
+         font-weight: 400 !important;
+         margin: 5px 0 0 0 !important;
+      }
+
+      .advantages__text {
+         color: var(--mycolor6);
+         margin: 0 0 5px 5px !important;
+      }
+
+      .advantages__item:hover .advantages__description {
+         color: #fff;
+      }
+
+      .advantages__item:hover .advantages__text {
+         color: #fff;
+      }
+
+      @media screen and (max-width: 500px) {
+         .advantages {
+            padding: 30px;
+         }
+
+         .advantages__item {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*--------getnew------*/
+      .getnew {
+         margin: 30px 0;
+         padding: 30px 40px;
+         background: url(img-9/getnew.jpg);
+         background-size: cover;
+         position: relative;
+         z-index: 0;
+         background-attachment: fixed;
+      }
+
+      .getnew::after {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(21, 21, 21, 0.2);
+         z-index: -1;
+      }
+
+      .getnew__container {
+         max-width: 50%;
+      }
+
+      ._container {}
+
+      .getnew__body {
+         text-align: center;
+         padding: 40px 0;
+      }
+
+      .getnew__title {
+         font-size: 40px !important;
+         line-height: 44px !important;
+         color: #fff;
+         font-weight: 400 !important;
+      }
+
+      .getnew__text {
+         color: #fff;
+         font-size: 18px;
+         font-weight: 300;
+      }
+
+      .getnew__button {}
+
+      .getnew__button {
+         display: inline-block;
+         padding: 12px 35px 9px;
+         font-size: 16px;
+         line-height: 22px;
+         color: #fff !important;
+         text-transform: uppercase;
+         background-color: var(--mycolor1);
+         transition: .4s;
+         position: relative;
+         z-index: 0;
+         overflow: hidden;
+         margin-top: 5px;
+      }
+
+      .getnew__button::after {
+         position: absolute;
+         content: '';
+         top: 0%;
+         left: calc(50% - 20px);
+         width: 40px;
+         height: 100%;
+         background-color: #424242;
+         z-index: -1;
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .getnew__button:hover::after {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 1;
+         transition: .3s;
+         color: var(--mycolor2) !important;
+      }
+
+      .getnew__button:hover {
+         color: #fff !important;
+         transition: .4s;
+
+      }
+
+      @media screen and (max-width: 500px) {
+         .getnew {
+            padding: 30px;
+         }
+
+         .getnew__container {
+            max-width: 100%;
+         }
+      }
+
+      /*-------about-------*/
+      .about {
+         padding: 30px 40px;
+      }
+
+      .about__container {}
+
+      ._container {}
+
+      .about__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+         padding: 20px 0;
+      }
+
+      .about__item {
+         padding: 0 20px;
+         text-align: center;
+         flex: 1 1 15%;
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         border-right: 2px solid var(--mycolor4);
+      }
+
+      .about__item:last-child {
+         border: none;
+      }
+
+      .about__top {
+         display: flex;
+         flex: 1 1 100%;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .about__number {
+         font-size: 60px;
+         font-weight: 300 !important;
+      }
+
+      .about__icon {
+         margin-left: 7px;
+      }
+
+      .about__icon img {
+         width: 40px;
+         height: 40px;
+      }
+
+      .about__text {
+         margin: 0 !important;
+         font-size: 18px !important;
+         color: var(--mycolor6);
+      }
+
+      @media screen and (max-width: 500px) {
+         .about {
+            padding: 30px;
+         }
+
+         .about__item {
+            flex: 1 1 30%;
+            border: none;
+            margin: 10px 0;
+         }
+      }
+
+      /*-----choose-----*/
+      .choose {
+         padding: 30px 40px;
+      }
+
+      .choose__container {}
+
+      ._container {}
+
+      .choose__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+         align-items: center;
+      }
+
+      .choose__image {
+         flex: 1 1 40%;
+         margin: 10px 30px 10px 10px;
+      }
+
+      .choose__image img {
+         width: 100%;
+      }
+
+      .choose__contet {
+         flex: 1 1 40%;
+         margin: 10px;
+
+      }
+
+      .choose__title {
+         color: var(--mycolor4);
+         font-size: 60px !important;
+         line-height: 64px !important;
+
+      }
+
+      .choose__text {
+         font-size: 14px;
+
+         letter-spacing: 0.5px;
+         font-family: var(--myfont2);
+      }
+
+      .choose__list {
+         display: flex;
+         flex-wrap: wrap;
+         font-family: var(--myfont2);
+      }
+
+      .choose__list li {
+         flex: 1 1 30%;
+         font-size: 12px !important;
+         position: relative;
+         padding-left: 15px !important;
+
+         letter-spacing: 0.5px;
+         box-sizing: border-box;
+      }
+
+      .choose__list li::before {
+         position: absolute;
+         content: '';
+         top: 5px;
+         left: 0;
+         width: 10px;
+         height: 10px;
+         background-color: var(--mycolor5);
+         border-radius: 50%;
+      }
+
+      .choose__buttons {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+      }
+
+      .choose__button_1 {
+         display: inline-block;
+         padding: 12px 30px 9px;
+         font-size: 16px;
+         line-height: 22px;
+         color: #fff !important;
+         text-transform: uppercase;
+         transition: .4s;
+         position: relative;
+         z-index: 0;
+         margin: 10px 10px 10px 0;
+         border: 2px solid var(--mycolor1);
+      }
+
+      .choose__button_1::after {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         opacity: 1;
+         transition: 0.3s;
+         background-color: var(--mycolor1);
+      }
+
+      .choose__button_1:hover::after {
+         top: -1px;
+         left: -1px;
+         width: 100%;
+         height: 100%;
+         transform: scale(0.9);
+         opacity: 0;
+         transition: 0.3s;
+      }
+
+
+      .choose__button_1::before {
+         position: absolute;
+         content: '';
+         top: -1px;
+         left: -1px;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         transform: scale(1.1);
+         border: 2px solid var(--mycolor2);
+         opacity: 0;
+         transition: .4s;
+      }
+
+      .choose__button_1:hover::before {
+
+         transform: scale(1);
+         opacity: 1;
+         transition: .4s;
+      }
+
+
+      .choose__button_1:hover {
+         color: var(--mycolor2) !important;
+         transition: .4s;
+         border: 2px solid transparent;
+      }
+
+      .choose__button_2 {
+         display: inline-block;
+         padding: 12px 30px 8.5px;
+         font-size: 16px;
+         line-height: 22px;
+         color: var(--mycolor2) !important;
+         text-transform: uppercase;
+         transition: .4s;
+         position: relative;
+         z-index: 0;
+         margin: 10px 10px 10px 0;
+
+      }
+
+      .choose__button_2::after {
+         position: absolute;
+         content: '';
+         top: -1px;
+         left: -1px;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         opacity: 1;
+         transition: 0.3s;
+         border: 2px solid var(--mycolor2);
+      }
+
+      .choose__button_2:hover::after {
+         top: -1px;
+         left: -1px;
+         width: 100%;
+         height: 100%;
+         transform: translate(-5px, 7px);
+         opacity: 0;
+         transition: 0.3s;
+      }
+
+      .choose__button_2::before {
+         position: absolute;
+         content: '';
+         top: -1px;
+         left: -1px;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         transform: scale(1.1);
+         border: 2px solid var(--mycolor5);
+         opacity: 0;
+         transition: .4s;
+         transform: translate(5px, -7px);
+      }
+
+      .choose__button_2:hover::before {
+         transform: translate(0);
+         transform: scale(1);
+         opacity: 1;
+         transition: .4s;
+      }
+
+
+      .choose__button_1:hover {
+         color: var(--mycolor2) !important;
+         transition: .4s;
+
+      }
+
+      .choose__button {}
+
+      .choose__button_1 {}
+
+      .choose__button_2 {}
+
+      @media screen and (max-width: 500px) {
+         .choose {
+            padding: 30px;
+         }
+
+         .choose__title {
+            font-size: 45px !important;
+            line-height: 48px !important;
+         }
+
+         .choose__image {
+            flex: 1 1 100%;
+            margin: 10px;
+         }
+
+         .choose__list li {
+            flex: 1 1 40%;
+
+         }
+      }
+
+      /*------partners------*/
+
+      .partners {
+         padding: 30px 40px;
+      }
+
+      .partners__container {}
+
+      ._container {}
+
+      .partners__title {}
+
+      .par-title {}
+
+      .partners__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+         align-items: center;
+      }
+
+      .partners__item {
+         flex: 1 1 20%;
+         margin: 10px;
+         border: 1px solid var(--mycolor4);
+         position: relative;
+         opacity: 0.5;
+         transition: .2s;
+         z-index: 0;
+      }
+
+      .partners__item img {
+         width: 100%;
+      }
+
+      .partners__item:hover {
+         opacity: 1;
+         transition: .2s;
+      }
+
+      .partners__item::after {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: 50%;
+         width: 0%;
+         height: 100%;
+         border-top: 1px solid var(--mycolor1);
+         border-bottom: 1px solid var(--mycolor1);
+         transition: .3s;
+         z-index: -1;
+      }
+
+      .partners__item:hover::after {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         transition: .3s;
+      }
+
+      .partners__item::before {
+         position: absolute;
+         content: '';
+         top: 50%;
+         left: 0;
+         width: 100%;
+         height: 0;
+         border-left: 1px solid var(--mycolor1);
+         border-right: 1px solid var(--mycolor1);
+         transition: .3s;
+         z-index: -1;
+      }
+
+      .partners__item:hover::before {
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         transition: .3s;
+      }
+
+      @media screen and (max-width: 700px) {
+         .partners__item {
+            flex: 1 1 40%;
+         }
+      }
+
+      @media screen and (max-width: 500px) {
+         .partners {
+            padding: 30px;
+         }
+      }
+
+      /*-----review-----*/
+      .review {
+         padding: 30px 40px;
+      }
+
+      .review__container {}
+
+      .review__title {}
+
+      .par-title {}
+
+      .review__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin: 10px -10px 0;
+      }
+
+      .review__item {
+         flex: 1 1 40%;
+         margin: 10px;
+         padding: 20px;
+         text-align: center;
+         box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
+         position: relative;
+         transition: .3s;
+      }
+
+      .review__item:hover {
+         transform: translateY(-10px);
+         transition: .3s;
+      }
+
+      .review__item::after {
+         position: absolute;
+         content: '';
+         top: -7px;
+         left: 10px;
+         width: calc(100% - 20px);
+         height: 7px;
+         background-color: #efefef;
+         transition: .3s;
+      }
+
+      .review__item::before {
+         position: absolute;
+         content: '';
+         top: -14px;
+         left: 20px;
+         width: calc(100% - 40px);
+         height: 7px;
+         background-color: var(--mycolor4);
+         transition: .3s;
+      }
+
+      .review__item:hover::before {
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .review__item:hover::after {
+         opacity: 0;
+         transition: .3s;
+      }
+
+      .review__icon {}
+
+      .review__icon img {
+         border-radius: 50%;
+         height: 90px;
+         width: 90px;
+      }
+
+      .review__text {
+         font-family: var(--myfont2);
+         font-size: 13px !important;
+      }
+
+      .review__name {
+         text-transform: uppercase;
+         font-size: 22px;
+         margin-bottom: 5px !important;
+      }
+
+      .review__position {
+         margin: 0 !important;
+         color: var(--mycolor1);
+         font-family: var(--myfont2);
+      }
+
+      @media screen and (max-width: 500px) {
+         .review {
+            padding: 30px;
+         }
+
+         .review__item {
+            margin: 20px 10px 10px;
+         }
+      }
+
+      /*---------blog-------*/
+      .blog {
+         padding: 30px 40px;
+      }
+
+      .blog__container {}
+
+      ._container {}
+
+      .blog__title {}
+
+      .par-title {}
+
+      .blog__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+
+      }
+
+      .blog__item {
+         margin: 10px;
+         flex: 1 1 25%;
+         border: 1px solid var(--mycolor4);
+      }
+
+      .blog__top {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px;
+      }
+
+      .blog__icon {
+         display: flex;
+         align-items: center;
+
+      }
+
+      .blog__icon img {
+         border-radius: 50%;
+
+      }
+
+      .blog__icon p {
+         padding-left: 10px;
+      }
+
+      .blog__byname {
+         color: var(--mycolor6);
+         font-size: 16px;
+         text-transform: uppercase;
+      }
+
+      .blog__data {
+         color: var(--mycolor5);
+         font-size: 16px;
+      }
+
+      .blog__img {
+         overflow: hidden;
+         display: flex;
+      }
+
+      .blog__img img {
+         width: 100%;
+         transition: .3s;
+         transform: scale(1.1);
+      }
+
+      .blog__item:hover .blog__img img {
+         transform: scale(1);
+         transition: .3s;
+      }
+
+      .blog__description {
+         padding: 10px;
+         text-transform: uppercase;
+      }
+
+      .blog__description a {
+         color: var(--mycolor2);
+         font-size: 20px;
+         line-height: 22px;
+         transition: .3s;
+      }
+
+      .blog__description:hover a {
+         color: var(--mycolor1);
+         transition: .3s;
+      }
+
+      @media screen and (max-width: 500px) {
+         .blog__item {
+            flex: 1 1 100%;
+         }
+
+         .blog {
+            padding: 30px;
+         }
+      }
+
+      /*---delivery----*/
+
+      .delivery {
+         padding: 30px 40px;
+      }
+
+      .delivery__container {}
+
+      ._container {}
+
+      .delivery__title {}
+
+      .par-title {}
+
+      .delivery__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         margin: 0 -10px;
+      }
+
+      .delivery__item {
+         flex: 1 1 25%;
+         margin: 10px;
+         border: 1px solid var(--mycolor4);
+         padding: 30px 20px;
+         text-align: center;
+         transition: .3s;
+      }
+
+      .delivery__item:hover {
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         transition: .3s;
+         border: 1px solid transparent;
+      }
+
+      .delivery__item:hover .delivery__icon {
+         transform: translateY(-5px);
+         transition: .3s;
+      }
+
+      .delivery__icon {
+         transition: .3s;
+      }
+
+      .delivery__description {
+         display: inline-block;
+         font-size: 18px !important;
+         text-transform: uppercase;
+         position: relative;
+         transition: .3s;
+      }
+
+      .delivery__item:hover .delivery__description {
+         transform: translateY(-5px);
+         transition: .3s;
+      }
+
+      .delivery__description::after {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         width: 0;
+         height: 0;
+         border-bottom: 2px solid var(--mycolor5);
+         transition: .3s;
+      }
+
+      .delivery__item:hover .delivery__description::after {
+         left: calc(50% - 40px);
+         width: 80px;
+         bottom: -10px;
+         border-bottom: 2px solid var(--mycolor5);
+         transition: .3s;
+      }
+
+      .delivery__item p {
+         transition: 0.3s;
+      }
+
+      .delivery__item:hover p {
+         transition: 0.3s;
+         transform: translateY(5px);
+      }
+
+      @media screen and (max-width: 500px) {
+         .delivery {
+            padding: 30px;
+         }
+
+         .delivery__item {
+            flex: 1 1 100%;
+         }
+      }
+   </style>
+   <div class="main">
+      <section class="introduction">
+         <div class="introduction__container __container">
+            <div class="introduction__body">
+               <div class="introduction__content">
+                  <p class="introduction__title">Highest quality <br> flooring solutions</p>
+                  <p class="introduction__text">Parquetry has been providing top-notch flooring products and solutions
+                     since our establishment.</p>
+                  <a href="" class="introduction__button par-button_1
+                  ">Shop now</a>
+               </div>
+               <div class="introduction__image"></div>
+            </div>
+         </div>
+      </section>
+      <section class="offer">
+         <div class="offer__container _container">
+            <div class="offer__title par-title">
+               <h2>Що ми пропонуємо</h2>
+            </div>
+            <div class="offer__body">
+               <a class="offer__item offer__item_1">
+                  <div class="offer__image"><img src="img-9/offer1.jpg" alt=""></div>
+                  <div class="offer__content">
+                     <h3 class="offer__description">NATURAL STONE
+                     </h3>
+                     <div class="offer__arrow"></div>
+                  </div>
+               </a>
+               <a class="offer__item offer__item_2">
+                  <div class="offer__image"><img src="img-9/offer2.jpg" alt=""></div>
+                  <div class="offer__content">
+                     <h3 class="offer__description">HARDWOOD
+                     </h3>
+                     <div class="offer__arrow"></div>
+                  </div>
+               </a>
+               <a class="offer__item">
+                  <div class="offer__image"><img src="img-9/offer3.jpg" alt=""></div>
+                  <div class="offer__content">
+                     <h3 class="offer__description">TILE
+                     </h3>
+                     <div class="offer__arrow"></div>
+                  </div>
+               </a>
+               <a class="offer__item">
+                  <div class="offer__image"><img src="img-9/offer4.jpg" alt=""></div>
+                  <div class="offer__content">
+                     <h3 class="offer__description">CARPET
+                     </h3>
+                     <div class="offer__arrow"></div>
+                  </div>
+               </a>
+               <a class="offer__item">
+                  <div class="offer__image"><img src="img-9/offer5.jpg" alt=""></div>
+                  <div class="offer__content">
+                     <h3 class="offer__description">LAMINATE
+                     </h3>
+                     <div class="offer__arrow"></div>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+      <section class="products">
+         <div class="products__container _container">
+            <div class="products__title par-title">
+               <h2>Топ пропозиції</h2>
+            </div>
+            <div class="products__body">
+               <div class="products__image"><img src="img-9/products.jpg" alt="">
+               </div>
+               <div class="products__content">
+                  <div class="products__item item-products">
+                     <div class="item-products__image"><img src="img-9/product1.png" alt="">
+                        <div class="products__hiden"> <a href="" class="products__button par-button_1">Add to cart</a>
+                        </div>
+                     </div>
+                     <a class="item-products__name">CARRARA MARBLE</a>
+                     <p class="item-products__price"><span>$500.00</span> $400.00</p>
+
+
+                  </div>
+                  <div class="products__item item-products">
+                     <div class="item-products__image"><img src="img-9/product2.png" alt="">
+                        <div class="products__hiden"> <a href="" class="products__button par-button_1">Add to cart</a>
+                        </div>
+                     </div>
+                     <a class="item-products__name">POLISHED MARBLE</a>
+                     <p class="item-products__price">$150.00</p>
+
+                  </div>
+                  <div class="products__item item-products">
+                     <div class="item-products__image"><img src="img-9/product3.png" alt="">
+                        <div class="products__hiden"> <a href="" class="products__button par-button_1">Add to cart</a>
+                        </div>
+                     </div>
+                     <a class="item-products__name">BASTILLE GRAY</a>
+                     <p class="item-products__price">$520.00</p>
+
+                  </div>
+                  <div class="products__item item-products">
+                     <div class="item-products__image"><img src="img-9/product4.png" alt="">
+                        <div class="products__hiden"> <a href="" class="products__button par-button_1">Add to cart</a>
+                        </div>
+                     </div>
+                     <a class="item-products__name">BAYCLIFF CAULFEILD</a>
+                     <p class="item-products__price">$350.00</p>
+
+                  </div>
+
+               </div>
+            </div>
+         </div>
+
+      </section>
+      <section class="advantages">
+         <div class="advantages__container _container">
+            <div class="advantages__title par-title">
+               <h2>Переваги нашої компанії</h2>
+            </div>
+            <div class="advantages__body">
+               <div class="advantages__item">
+                  <div class="advantages__item_wrapp">
+                     <div class="advantages__icon"></div>
+                     <div class="advantages__content">
+                        <h4 class="advantages__description">FREE WORLDWIDE DELIVERY</h4>
+                        <p class="advantages__text">When ordering from $300</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="advantages__item">
+                  <div class="advantages__item_wrapp">
+                     <div class="advantages__icon advantages__icon_2"></div>
+                     <div class="advantages__content">
+                        <h4 class="advantages__description">FREE WORLDWIDE DELIVERY</h4>
+                        <p class="advantages__text">When ordering from $300</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="advantages__item">
+                  <div class="advantages__item_wrapp">
+                     <div class="advantages__icon advantages__icon_3"></div>
+                     <div class="advantages__content">
+                        <h4 class="advantages__description">FREE WORLDWIDE DELIVERY</h4>
+                        <p class="advantages__text">When ordering from $300</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="getnew">
+         <div class="getnew__container _container">
+            <div class="getnew__body">
+               <h2 class="getnew__title">Замовте прямо зараз та отримайте знижку!</h2>
+               <p class="getnew__text">Parquetry offers lots of great flooring solutions for home owners. Whether you
+                  prefer laminate or natural stone flooring, our experts can manufacture and install anything you like!
+               </p>
+               <a href="" class="getnew__button">Shop now</a>
+            </div>
+         </div>
+      </section>
+      <section class="about">
+         <div class="about__container _container">
+            <div class="about__title par-title">
+               <h2>Про нас</h2>
+            </div>
+            <div class="about__body">
+               <div class="about__item">
+                  <div class="about__top">
+                     <p class="about__number">12</p>
+                     <div class="about__icon"><img src="img-9/about1.png" alt=""></div>
+                  </div>
+                  <p class="about__text">AWARDS</p>
+               </div>
+               <div class="about__item">
+                  <div class="about__top">
+                     <p class="about__number">2K</p>
+                     <div class="about__icon"><img src="img-9/about2.png" alt=""></div>
+                  </div>
+
+                  <p class="about__text">
+                     PROJECTS</p>
+               </div>
+               <div class="about__item">
+                  <div class="about__top">
+                     <p class="about__number">679</p>
+                     <div class="about__icon"><img src="img-9/about3.png" alt=""></div>
+                  </div>
+
+                  <p class="about__text">HAPPY CLIENTS</p>
+               </div>
+               <div class="about__item">
+                  <div class="about__top">
+                     <p class="about__number">25</p>
+                     <div class="about__icon"><img src="img-9/about4.png" alt=""></div>
+                  </div>
+
+                  <p class="about__text">TEAM MEMBERS</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="choose">
+         <div class="choose__container _container">
+            <div class="choose__body">
+               <div class="choose__image"><img src="img-9/choose.jpg" alt=""></div>
+               <div class="choose__contet">
+                  <h2 class="choose__title">Чому варто обрати нас?</h2>
+                  <p class="choose__text">Ubi est secundus nuclear vexatum iacere? Abaculus ortums, tanquam dexter
+                     gemna. Bi-color brodiums ducunt ad victrix. Glos bi-color fides est. Est rusticus gemna, cesaris.
+                     Mirabilis, grandis gabaliums rare imperium.</p>
+                  <ul class="choose__list">
+                     <li>Torquiss prarere</li>
+                     <li>Extums mori</li>
+                     <li>Cedriums ridetis</li>
+                     <li>Menss cantare</li>
+                     <li>Accentors velum</li>
+                     <li>Parmas unda</li>
+                  </ul>
+                  <div class="choose__buttons"> <a class="choose__button choose__button_1" href="">Get in touch</a>
+                     <a class="choose__button choose__button_2" href="">Download presentation</a>
+                  </div>
+
+
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="partners">
+         <div class="partners__container _container">
+            <div class="partners__title par-title">
+               <h2>Наші партнери</h2>
+            </div>
+            <div class="partners__body">
+               <div class="partners__item">
+                  <img src="img-9/partners1.png" alt="">
+               </div>
+               <div class="partners__item">
+                  <img src="img-9/partners2.png" alt="">
+               </div>
+               <div class="partners__item">
+                  <img src="img-9/partners3.png" alt="">
+               </div>
+               <div class="partners__item">
+                  <img src="img-9/partners4.png" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="review">
+         <div class="review__container">
+            <div class="review__title par-title">
+               <h2>Відгуки клієнтів</h2>
+            </div>
+            <div class="review__body">
+               <div class="review__item">
+                  <div class="review__icon"><img src="img-9/review1.jpg" alt=""></div>
+                  <p class="review__text">The floor looks magnificent and the parquet in the hall sets it off
+                     beautifully. Your men were excellent, you were delightful and nothing was too much trouble for you.
+                     You have very tidy workers, covering everything, and the house was left in a good shape as the
+                     condition allowed.</p>
+                  <p class="review__name">Sam Brown</p>
+                  <p class="review__position">Client</p>
+               </div>
+               <div class="review__item">
+                  <div class="review__icon"><img src="img-9/review2.jpg" alt=""></div>
+                  <p class="review__text">I just wanted to say thank you and the team very much for the brilliant
+                     service around renovating the floors at our house. You were absolutely brilliant and we can see
+                     you’ve gone the extra mile matching the floors between rooms etc. You’ve kept the place really tidy
+                     too, cannot ask for more.</p>
+                  <p class="review__name">Catherine Williams</p>
+                  <p class="review__position">Client</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="delivery">
+         <div class="delivery__container _container">
+            <div class="delivery__title par-title">
+               <h2>Як оформити доставку</h2>
+            </div>
+            <div class="delivery__body">
+               <div class="delivery__item">
+                  <div class="delivery__icon"><img src="img-9/delivery1.png" alt=""></div>
+                  <h4 class="delivery__description">order</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, id</p>
+               </div>
+               <div class="delivery__item">
+                  <div class="delivery__icon"><img src="img-9/delivery2.png" alt=""></div>
+                  <h4 class="delivery__description">payment</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, id</p>
+               </div>
+               <div class="delivery__item">
+                  <div class="delivery__icon"><img src="img-9/delivery3.png" alt=""></div>
+                  <h4 class="delivery__description">delivery</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, id</p>
+               </div>
+            </div>
+         </div>
+
+      </section>
+      <section class="blog">
+         <div class="blog__container _container">
+            <div class="blog__title par-title">
+               <h2>Новинки нашого блогу</h2>
+            </div>
+            <div class="blog__body">
+               <div class="blog__item">
+                  <div class="blog__top">
+                     <div class="blog__icon"><img src="img-9/icon-blog1.jpg" alt="">
+                        <p class="blog__byname">BY MARY LEE</p>
+                     </div>
+
+                     <p class="blog__data">MAY 17, 2024</p>
+                  </div>
+                  <div class="blog__img"><img src="img-9/blog1.jpg" alt=""></div>
+                  <div class="blog__description">
+                     <a href="">Flooring Pro’s Secrets that can Raise Your Home Value</a>
+                  </div>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__top">
+                     <div class="blog__icon"><img src="img-9/icon-blog2.jpg" alt="">
+                        <p class="blog__byname">BY RUPERT WOOD</p>
+                     </div>
+                     <p class="blog__data">MAY 10, 2024</p>
+                  </div>
+                  <div class="blog__img"><img src="img-9/blog2.jpg" alt=""></div>
+                  <div class="blog__description">
+                     <a href="">BEST LAMINATE & HARDWOOD FLOORING TRENDS FOR 2022</a>
+                  </div>
+               </div>
+               <div class="blog__item">
+                  <div class="blog__top">
+                     <div class="blog__icon"><img src="img-9/icon-blog3.jpg" alt="">
+                        <p class="blog__byname">BY ANN ANDERSON</p>
+                     </div>
+                     <p class="blog__data">MAY 04, 2024</p>
+                  </div>
+                  <div class="blog__img"><img src="img-9/blog3.jpg" alt=""></div>
+                  <div class="blog__description">
+                     <a href="">HOW TO PICK FLOORS / CARPET & GET THE BEST DEALS</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</body>
+
+</html>
